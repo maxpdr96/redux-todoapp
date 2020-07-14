@@ -1,5 +1,9 @@
 # ReduxTodoapp
 
+To-do List using Angular and NgRx.
+
+## Angular 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
 ## Development server
