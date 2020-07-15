@@ -1,5 +1,3 @@
-import { throws } from "assert";
-
 export class Todo {
 
     public id: number;
