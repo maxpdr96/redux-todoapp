@@ -4,11 +4,7 @@ import { createTodo, toggle, editar, apagar, toggleAll, limparTodos } from './to
 
 
 
-export const initialState: Todo[] = [
-    new Todo('Salvar o mundo'),
-    new Todo('Vencer o thanos'),
-    new Todo('Comprar traje do ironman')
-];
+export const initialState: Todo[] = [];
 
 // tslint:disable-next-line: variable-name
 const _todoReducer = createReducer(initialState,
