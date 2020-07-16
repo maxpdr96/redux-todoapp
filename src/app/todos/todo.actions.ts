@@ -24,6 +24,9 @@ export const apagar = createAction(
 
 export const toggleAll = createAction(
     '[TODO] ToggleAll Todo',
-    props<{ completado: boolean}>()
+    props<{ completado: boolean }>()
 
+);
+export const limparTodos = createAction(
+    '[TODO] limpar Todo'
 );

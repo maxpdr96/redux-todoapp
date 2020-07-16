@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { Todo } from './models/todo.model';
-import { createTodo, toggle, editar, apagar, toggleAll } from './todo.actions';
+import { createTodo, toggle, editar, apagar, toggleAll, limparTodos } from './todo.actions';
 
 
 
@@ -16,7 +16,9 @@ const _todoReducer = createReducer(initialState,
 
     on(apagar, (state, { id }) => state.filter(todo => todo.id !== id)),
 
-    on(toggleAll, (state, { completado }) => state.map( todo => {
+    on(limparTodos, state => state.filter(todo => !todo.completado)),
+
+    on(toggleAll, (state, { completado }) => state.map(todo => {
         return {
             ...todo,
             // tslint:disable-next-line: object-literal-shorthand
